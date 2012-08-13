@@ -1,0 +1,30 @@
+{
+  "name": "cqrsnode",
+  "version": "0.0.0",
+  "description": "cqrs framework for node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brighthas/node-cqrs.git"
+  },
+  "keywords": [
+    "cqrs",
+    "ddd",
+    "dci",
+    "node",
+    "node.js",
+    ""
+  ],
+	"engines":{
+		"node": ">= v0.6.16"
+  },
+	"dependencies":{
+		"eventstore":">= 0.0.1",
+		"eventstore.mongoDb":">= 0.0.1"
+	},
+  "author": "brighthas <brighthas@gmail.com>",
+  "license": "MIT"
+}
