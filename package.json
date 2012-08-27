@@ -1,6 +1,6 @@
 {
   "name": "cqrsnode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "cqrs framework for node.js",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,8 @@
     "eventstore.mongoDb": ">= 0.0.1"
   },
   "author": "brighthas <brighthas@gmail.com>",
-  "license": "BSD"
+  "license": "BSD",
+  "directories": {
+    "test": "test"
+  }
 }

@@ -1,4 +1,4 @@
-var cqrs = require('../../lib/CQRS');
+var cqrs = require('../..');
 var Event = cqrs.Event;
 var util = require('util');
 var uuid = require('node-uuid');
