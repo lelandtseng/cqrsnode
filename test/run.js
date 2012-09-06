@@ -1,4 +1,4 @@
-var cqrs = require('..');
+var cqrs = require('../src/node-cqrs');
 cqrs.init({mainPath:__dirname});
 
 var bus = cqrs.commandBus;

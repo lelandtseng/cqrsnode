@@ -1,10 +1,4 @@
-var cqrs = require('../..');
-var Event = cqrs.Event;
-var util = require('util');
-var uuid = require('node-uuid');
-
-function User(id){
-	cqrs.Aggre.call(this,id);
+function User(){
 	var self = this;
 	this.on('changeName',function(name){
 		self._data.name = name;				
@@ -12,19 +6,16 @@ function User(id){
 }
 
 User.create = function(){
-	var u = new User(uuid.v1());
+	var u = new User();
 	return u;
 }
 
-util.inherits(User,cqrs.Aggre);
+User.prototype = {
 
-var u = User.prototype;
+ changeName : function(name){
+ 	 var e = ['changeName',name];
+	 this.publish(e);
+ }
 
-u.changeName = function(name){
-	var e = new Event('changeName',name);
-	this.publish(e)
 }
-
 module.exports = User;
-
-
