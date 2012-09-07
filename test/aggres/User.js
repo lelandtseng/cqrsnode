@@ -1,4 +1,5 @@
 function User(){
+	
 	var self = this;
 	this.on('changeName',function(name){
 		self._data.name = name;				
@@ -6,7 +7,7 @@ function User(){
 }
 
 User.create = function(){
-	var u = new User();
+	var u = new this();
 	return u;
 }
 
