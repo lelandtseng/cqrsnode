@@ -42,3 +42,11 @@ b806af40-f019-11e1-b463-39859a5a3668._key	"b806af40-f019-11e1-b463-39859a5a3668"
 9093d950-f01a-11e1-af18-61547d0c9da4.num	0
 9093d950-f01a-11e1-af18-61547d0c9da4.data	{"id":"90938b30-f01a-11e1-af18-61547d0c9da4","state":"LIVE"}
 9093d950-f01a-11e1-af18-61547d0c9da4._key	"9093d950-f01a-11e1-af18-61547d0c9da4"
+dd96e430-f8b8-11e1-86c4-c52d03fc26a0.aggreId	"90938b30-f01a-11e1-af18-61547d0c9da4"
+dd96e430-f8b8-11e1-86c4-c52d03fc26a0.num	1
+dd96e430-f8b8-11e1-86c4-c52d03fc26a0.data	{"id":"90938b30-f01a-11e1-af18-61547d0c9da4","state":"LIVE","name":"bright"}
+dd96e430-f8b8-11e1-86c4-c52d03fc26a0._key	"dd96e430-f8b8-11e1-86c4-c52d03fc26a0"
+fbc6b480-f8b8-11e1-90ce-df3ef7753fbe.aggreId	"90938b30-f01a-11e1-af18-61547d0c9da4"
+fbc6b480-f8b8-11e1-90ce-df3ef7753fbe.num	2
+fbc6b480-f8b8-11e1-90ce-df3ef7753fbe.data	{"id":"90938b30-f01a-11e1-af18-61547d0c9da4","state":"LIVE","name":"bright"}
+fbc6b480-f8b8-11e1-90ce-df3ef7753fbe._key	"fbc6b480-f8b8-11e1-90ce-df3ef7753fbe"
