@@ -2,7 +2,6 @@ var cqrs = require('..');
 cqrs.init({mainPath:__dirname});
 
 var bus = cqrs.commandBus;
-console.log(cqrs.commands);
 var ChangeCommand = cqrs.commands.ChangeUserName;
 var Command = cqrs.commands.CreateUser;
 
