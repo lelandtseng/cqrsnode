@@ -1,4 +1,4 @@
-var cqrs = require('..');
+var cqrs = require('../src/cqrsnode');
 cqrs.init({mainPath:__dirname});
 
 var bus = cqrs.commandBus;
@@ -10,7 +10,7 @@ setTimeout(function(){
 
 var cmd = new Command();
 bus.execute(cmd,function(r){
-	console.log(r)	
+	//console.log(r)	
 });
 
 /*

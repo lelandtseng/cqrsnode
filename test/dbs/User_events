@@ -246,3 +246,7 @@ c4b60540-f962-11e1-8981-effdfe68946f.data	{"name":"create","data":{"id":"8605892
 c4b60540-f962-11e1-8981-effdfe68946f.num	6
 c4b60540-f962-11e1-8981-effdfe68946f.snum	0
 c4b60540-f962-11e1-8981-effdfe68946f._key	"c4b60540-f962-11e1-8981-effdfe68946f"
+a649c860-f987-11e1-aa65-0dce1f7f2a44.data	{"name":"create","data":{"id":"741418b4-00c5-4c58-a9af-a48f4135404e","state":"LIVE"},"aggreType":"User","aggreId":"741418b4-00c5-4c58-a9af-a48f4135404e","time":"2012-09-08T07:34:40.355Z"}
+a649c860-f987-11e1-aa65-0dce1f7f2a44.num	7
+a649c860-f987-11e1-aa65-0dce1f7f2a44.snum	0
+a649c860-f987-11e1-aa65-0dce1f7f2a44._key	"a649c860-f987-11e1-aa65-0dce1f7f2a44"
