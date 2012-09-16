@@ -46,7 +46,6 @@ var r = new Repository(M,es);
 r.create(function(){
 	r.findById('id01',function(mm,next){
 		mm.changeName('bright');
-		console.log(mm._data);
 		next();
 	});
 });
