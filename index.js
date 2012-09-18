@@ -1,1 +1,1 @@
-module.exports = require('./lib/cqrs');
+module.exports = require('./lib');
