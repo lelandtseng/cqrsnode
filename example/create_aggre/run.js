@@ -1,15 +1,16 @@
-var cqrs = require('../..');
-cqrs.init({mainPath:__dirname});
+var Domain = require('../..');
+var Store = require('../../lib/stores/tiny')
+var domain = new Domain({mainPath:__dirname,Store:Store});
 
-var bus = cqrs.commandBus;
-var Command = cqrs.commands.CreateUser;
+var bus = domain.commandBus;
+var Command = domain.commands.CreateUser;
 
 setTimeout(function(){
 var cmd = new Command();
-bus.execute(cmd,function(r){
+bus.execute('CreateUser',cmd,function(r){
 			
 });
-},1000);
+},2000);
 
 
 
