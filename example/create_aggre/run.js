@@ -1,5 +1,5 @@
 var Domain = require('../..');
-var Store = require('../../lib/stores/tiny')
+var Store = require('cqrsnode.store').Tiny;
 var domain = new Domain({mainPath:__dirname,Store:Store});
 
 var bus = domain.commandBus;

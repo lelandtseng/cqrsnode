@@ -22,13 +22,13 @@
     "node": ">= v0.6.16"
   },
   "dependencies": {
-    "tiny": ">= 0.0.1",
     "node-extend": ">= 0.0.7",
     "node-uuid": ">=0.0.1",
-    "lockmethod": ">=0.0.1"
+    "lockmethod": ">=0.0.1",
+    "cqrsnode.store": ">=0.1.0"
   },
   "author": "brighthas <brighthas@gmail.com>",
-  "license": "BSD",
+  "license": "MIT",
   "directories": {
     "example": "example",
     "test": "test"
