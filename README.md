@@ -18,7 +18,7 @@ Aggre API and Example:
 =======================
 
 		// create like it at /aggres dir.
-		
+
 		module.exports = User;
 
 		function User(){}
@@ -45,9 +45,9 @@ Aggre API and Example:
 			// you can create self function,
 			// and each function will emit event,
 			// so you use "this.publish" emit event.
-			// please use this function change self._data, 
+			// please don't use this function change self._data, 
 			// aggre function only create event and publish.
-			// change self state , please write in $udpateSate function.
+			// change self state , please write in $updateSate function.
 			changeName:function(name){
 				var e = ['changeName',name];
 				this.publish(e);

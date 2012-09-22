@@ -18,6 +18,7 @@ describe('User',function(){
 
 	var domain = new Domain({mainPath:__dirname+'/dir01',Store:Store});
 	var obj = null;
+	var id = null;
 
 	describe('#create',function(){
 
@@ -38,10 +39,23 @@ describe('User',function(){
 		 it('change user name',function(done){
 
 		 	obj.changeName('brighthas');
-		 	console.log(obj._data.name)
 		 	obj._data.name.should.equal('brighthas');
-
+		 	id  =  obj._data.id;
 		 	done()
+		 })
+	})
+
+
+	describe('#findbyID',function(){
+		 it('find user',function(done){
+
+		 	var cmd = {name:'FindUser',data:{id:id}};
+		 	domain.execute(cmd,function(result,next){
+		 		next();
+				done();
+
+		 	})
+		 	
 		 })
 	})
 
