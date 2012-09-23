@@ -1,6 +1,6 @@
 Note
 ========
-Integration, wait a few days, the full version of the conference released 0.2.0 version, so now does not work.
+Integration, wait a few days, the full version will be released in the 0.2.0 version, so now does not work properly.
 
 cqrsnode
 =========
