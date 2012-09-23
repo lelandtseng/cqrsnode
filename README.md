@@ -1,3 +1,7 @@
+Note
+========
+Integration, wait a few days, the full version of the conference released 0.2.0 version, so now does not work.
+
 cqrsnode
 =========
     CQRS framework for node.js
