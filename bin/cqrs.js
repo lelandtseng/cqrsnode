@@ -14,3 +14,5 @@ fs.mkdir(projectName+'commandHandles', function(){});
 fs.mkdir(projectName+'dbs', function(){});
 fs.mkdir(projectName+'eventHandles', function(){});
 fs.mkdir(projectName+'extensions', function(){});
+fs.mkdir(projectName+'queries', function(){});
+fs.mkdir(projectName+'queryHandles', function(){});
