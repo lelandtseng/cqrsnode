@@ -2,6 +2,10 @@ Note
 ========
 Integration, wait a few days, the full version will be released in the 0.2.0 version, so now does not work properly.
 
+Tutorial
+========
+[Tutorials](https://github.com/brighthas/cqrsnode/wiki)
+
 cqrsnode
 =========
     CQRS framework for node.js
