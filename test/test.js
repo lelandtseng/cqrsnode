@@ -1,26 +1,22 @@
 var assert = require('assert');
 var should = require('should');
 var Domain = require('..');
-var Store = require('cqrsnode.store').Mem;
+var EventStore = require('../../cqrsnode.eventstore').Tiny;
+var DBStore = require('../../cqrsnode.dbstore').Mongoose; 
 
 describe('Domain', function(){
+var domain;
+var obj = null;
+var id = null;
 
   describe('#new', function(){
     it('create new domain', function(done){
-        var domain = new Domain({mainPath:__dirname+'/dir01',Store:Store});
+        domain = new Domain({mainPath:__dirname+'/dir01',Store:EventStore,dbs:[]});
         done()
     })
   })
 
-})
-
-describe('User',function(){
-
-	var domain = new Domain({mainPath:__dirname+'/dir01',Store:Store});
-	var obj = null;
-	var id = null;
-
-	describe('#create',function(){
+describe('#create',function(){
 
 		it('create new User',function(done){
 			setTimeout(function(){
@@ -37,10 +33,9 @@ describe('User',function(){
 
 	describe('#command',function(){
 		 it('change user name',function(done){
-
 		 	obj.changeName('brighthas');
-		 	obj._data.name.should.equal('brighthas');
-		 	id  =  obj._data.id;
+		 	obj.data('name').should.equal('brighthas');
+		 	id  =  obj.id;
 		 	done()
 		 })
 	})
@@ -61,3 +56,5 @@ describe('User',function(){
 
 	
 })
+
+
