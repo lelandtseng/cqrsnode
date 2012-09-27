@@ -1,8 +1,8 @@
 var assert = require('assert');
 var should = require('should');
 var Domain = require('..');
-var EventStore = require('../../domain.eventstore').Tiny;
-var DBStore = require('../../domain.dbstore').Mongoose; 
+var EventStore = require('../../cqrsnode.eventstore').Tiny;
+var DBStore = require('../../cqrsnode.dbstore').Mongoose; 
 
 describe('Domain', function(){
 var domain;
@@ -21,7 +21,7 @@ describe('#create',function(){
 		it('create new User',function(done){
 			setTimeout(function(){
 				var cmd = {name:'CreateUser'};
-				domain.execute(cmd,function(result){
+				domain.execute(cmd,function(err,result){
 					obj = result;
 					result.should.be.a('object');
 					done()
@@ -45,10 +45,9 @@ describe('#create',function(){
 		 it('find user',function(done){
 
 		 	var cmd = {name:'FindUser',data:{id:id}};
-		 	domain.execute(cmd,function(result,next){
+		 	domain.execute(cmd,function(err,result,next){
 		 		next();
 				done();
-
 		 	})
 		 	
 		 })
