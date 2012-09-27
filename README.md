@@ -13,13 +13,24 @@ cqrsnode
 
 install
 =========
-    npm install cqrsnode
+
+    npm install domain
+
+
+    and
+    
+    var Domain = require('domain');
+
+    var domain1 = new Domain(options1);
+    var domain2 = new Domain(options2);
 
 example
 =========
-    >cqrs
+
+    domain -c appName
+
     result is create dirs:
-        aggres | eventHandles | commands | commandHandles | dbs
+        aggres | eventHandles | commands | commandHandles | queries | queryHandles | services
 
     
 Aggre API and Example:
