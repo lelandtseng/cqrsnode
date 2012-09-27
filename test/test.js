@@ -1,8 +1,8 @@
 var assert = require('assert');
 var should = require('should');
 var Domain = require('..');
-var EventStore = require('../../cqrsnode.eventstore').Tiny;
-var DBStore = require('../../cqrsnode.dbstore').Mongoose; 
+var EventStore = require('../../domain.eventstore').Tiny;
+var DBStore = require('../../domain.dbstore').Mongoose; 
 
 describe('Domain', function(){
 var domain;
