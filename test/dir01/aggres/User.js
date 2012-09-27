@@ -1,6 +1,10 @@
-module.exports = User;
+module.exports = User; 
 
 function User(){
+	// validat	
+	this.on('changeName',function(name){
+		console.log('now user name is '+this.data('name'));	
+	})
 }
 
 User.prototype = {

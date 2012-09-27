@@ -6,10 +6,9 @@ var DBStore = require('../../cqrsnode.dbstore').Mongoose;
 
 describe('Domain', function(){
 var domain;
-var obj = null;
 var id = null;
 
-  describe('#new', function(){
+ describe('#new', function(){
     it('create new domain', function(done){
         domain = new Domain({mainPath:__dirname+'/dir01',Store:EventStore,dbs:[]});
         done()
@@ -22,20 +21,28 @@ describe('#create',function(){
 			setTimeout(function(){
 				var cmd = {name:'CreateUser'};
 				domain.execute(cmd,function(err,result){
-					obj = result;
-					result.should.be.a('object');
+					id = result.data('id');
 					done()
 				});
-			},1000)
+			},500)
 		})
 
 	})
 
 	describe('#command',function(){
 		 it('change user name',function(done){
-		 	obj.changeName('brighthas');
-		 	obj.data('name').should.equal('brighthas');
-		 	id  =  obj.id;
+			var cmd = {
+				name:'ChangeUserName',
+				data:{
+					id:id,
+					name:"brighthas oklll"
+				}
+			}
+
+			domain.execute(cmd,function(){
+			
+			});
+
 		 	done()
 		 })
 	})
