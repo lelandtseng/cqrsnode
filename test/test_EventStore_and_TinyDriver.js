@@ -58,12 +58,11 @@ describe('TinyDriver', function(){
 
 	it('#findEvents',function(){
 		 es.findEvents('id001',0,5,function(err,rs){
-		 	  console.log(rs.length) 
 		 })	
 	})
 
 	it('#findEvents',function(){
-		es.count('id001',function(err,len){console.log(len)})
+		es.count('id001',function(err,len){})
 	});
 
 })

@@ -1,6 +1,6 @@
 {
-  "name": "domain",
-  "version": "0.1.5",
+  "name": "cqrsnode",
+  "version": "0.0.13",
   "description": "cqrs framework for node.js",
   "main": "index.js",
   "scripts": {
@@ -30,10 +30,9 @@
   "author": "brighthas <brighthas@gmail.com>",
   "license": "MIT",
   "directories": {
-    "test": "test",
-    "example": "example"
+    "test": "test"
   },
   "bin": {
-    "cqrsnode": "bin/cqrs.js"
+    "cqrsnode": "bin/cqrsnode.js"
   }
 }
