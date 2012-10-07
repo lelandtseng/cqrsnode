@@ -9,7 +9,7 @@ if(process.argv.length > 2){
 	fs.mkdirSync(projectName);
 }
 
-fs.mkdir(projectName+'aggres', function(){});
+fs.mkdir(projectName+'Aggres', function(){});
 fs.mkdir(projectName+'commandHandles', function(){});
 fs.mkdir(projectName+'eventHandles', function(){});
 fs.mkdir(projectName+'extensions', function(){});
