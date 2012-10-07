@@ -15,23 +15,34 @@ cqrsnode
 install
 =========
 
-    npm install domain
+    npm install cqrsnode 
 
 
     and
     
-    var Domain = require('domain');
+    var	Domain  = require('cqrsnode');
 
-    var domain1 = new Domain(options1);
-    var domain2 = new Domain(options2);
+    var domain1 = new Domain(cfg,domainname);
+    var domain2 = new Domain(domainname);
+    var domain3 = new Domain(cfg);
+
+		domain1.on('User','changeName',function cb(){...})
+		domain1.once('Product','price',function cb(){...})
+
+		var query01 = ['alluser']
+		domain1.q(query01,function callback(){...})
+
+		var cmd01 = ['changeUserName','id001','leo']
+		domain1.exec(com01,function cb(){...})
+
 
 example
 =========
 
-    domain -c appName
+    cqrsnode appName
 
     result is create dirs:
-        aggres | eventHandles | commands | commandHandles | queries | queryHandles | services
+        Aggres | eventHandles | commandHandles | queryHandles | services
 
     
 Aggre API and Example:
@@ -43,12 +54,6 @@ Aggre API and Example:
 
 		function User(){}
 
-		// create User obj function
-		User.create = function(name){
-			// ... u
-			return u;
-		}
-
 		User.prototype = {
 
 			// this function change aggre state,
@@ -58,7 +63,7 @@ Aggre API and Example:
 				// example, listen 'changeName' event.
 				this.on('changeName',function(name){
 					// this.data is aggre._data.
-					this.data.name = name;
+					this.data('name',name);
 				})
 			},
 
