@@ -10,6 +10,7 @@ Test.prototype = {
 		var e = ['change name',name];	
 		this.publish(e);
 	},
+	
 
 	$updateState:function(){
 		this.on('change name',function(name){
@@ -18,3 +19,5 @@ Test.prototype = {
 	}		
 
 }
+
+Test.findByName = function(){}

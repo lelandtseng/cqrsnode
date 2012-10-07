@@ -73,5 +73,8 @@ describe('Loader.js', function(){
 	it('#eventStores',function(){
 		loader.eventStores.should.be.a('object');
 	})
+	it('#QAggres',function(){
+		loader.QAggres.should.be.a('object')
+	})
 
 });
