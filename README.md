@@ -1,6 +1,6 @@
 Note
 ========
-publish version 0.0.1 alpha , Please note this version is still too unstable.Need to wait for 0.0.2 version.
+publish version 0.0.2 alpha , Please note this version is still too unstable.Need to wait for 0.2.0 stable version.
 
 
 Tutorial

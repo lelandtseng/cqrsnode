@@ -36,7 +36,6 @@ var a = null;
 
 	it('#get',function(){
 		Test.get('88570ba0-0f81-11e2-9b2b-151343a86b91',function(err,obj,next){
-		console.log(obj.data())
 		})	
 	})
 
