@@ -8,7 +8,7 @@ module.exports = {
 
 	'updateName':function(cmd , callback){
 		this.aggre('Test').get(cmd.id,function(err,test,next){
-			  test.changeName('jfldsjflsd')	
+			  test.updateName('jfldsjflsd')	
 				next();
 				callback();
 		})	 

@@ -12,7 +12,6 @@ if(process.argv.length > 2){
 fs.mkdir(projectName+'Aggres', function(){});
 fs.mkdir(projectName+'commandHandles', function(){});
 fs.mkdir(projectName+'eventHandles', function(){});
-fs.mkdir(projectName+'extensions', function(){});
 fs.mkdir(projectName+'queryHandles', function(){});
 fs.mkdir(projectName+'services', function(){});
 var cfg = fs.readFileSync(__dirname+'/../lib/config.js','utf-8');
