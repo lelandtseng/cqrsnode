@@ -1,85 +1,157 @@
-Note
+Note 
 ========
 publish version 0.0.2 alpha , Please note this version is still too unstable.Need to wait for 0.2.0 stable version.
-
-
-Tutorial
-========
-[Tutorials](https://github.com/brighthas/cqrsnode/wiki)
 
 cqrsnode
 =========
     CQRS framework for node.js
 
-
 install
 =========
-
     npm install cqrsnode 
 
-
-    and
-    
-    var	Domain  = require('cqrsnode');
-
-    var domain1 = new Domain(cfg,domainname);
-    var domain2 = new Domain(domainname);
-    var domain3 = new Domain(cfg);
-
-		domain1.on('User','changeName',function cb(){...})
-		domain1.once('Product','price',function cb(){...})
-
-		var query01 = ['alluser']
-		domain1.q(query01,function callback(){...})
-
-		var cmd01 = ['changeUserName','id001','leo']
-		domain1.exec(com01,function cb(){...})
-
-
-example
-=========
-
+create a app
+============
     cqrsnode appName
 
     result is create dirs:
         Aggres | eventHandles | commandHandles | queryHandles | services
 
+Aggre code example
+===================
     
-Aggre API and Example:
-=======================
-
-		// create like it at /aggres dir.
-
 		module.exports = User;
 
-		function User(){}
+		function User(){
 
+		}
+		
 		User.prototype = {
-
-			// this function change aggre state,
-			// state is aggre._data private state.
-			// when aggre emit a event, you can use this function to listen.
+		  // all update operating for .
 			$updateState:function(){
-				// example, listen 'changeName' event.
-				this.on('changeName',function(name){
-					// this.data is aggre._data.
-					this.data('name',name);
+				this.on('change name',function(name){
+				  this.data('name',name);	
+				});
+
+				this.on('change age',function(age){
+					this.data('age',age);	
+				})
+
+				this.on('change',function(info){
+					this.data('age',info.age);	
+					this.data('name',info.name);	
 				})
 			},
-
-			// you can create self function,
-			// and each function will emit event,
-			// so you use "this.publish" emit event.
-			// please don't use this function change self._data, 
-			// aggre function only create event and publish.
-			// change self state , please write in $updateSate function.
 			changeName:function(name){
-				var e = ['changeName',name];
+				var e = ['change name',name];
 				this.publish(e);
 			},
+			changeAge:function(age){
+				var e = ['change age',age];
+				this.publish(e);
+			},
+			changeUser:function(name,age){
+				var e = ['change',{name:name,age:age}]	
+				this.publish(e);
+			}
+		}	
 
-			// ... you can create other functions,
-			// top only a example of function.
+		User.findByIds = function(ids,callback){
+			...
 		}
+
+		User.findByName = function(name,callback){
+			...	
+		}
+
+
+command handle example 
+======================
+
+    module.exports = {
+
+	  'change user name':function(cmd,callback){
+     var User = this.aggre('User')	
+		 User.get(cmd,id,function(u,next){
+		    u.changeName(cmd.name); 
+				callback();
+				next();
+		 })
+	  },
+
+	  'change user age':function(cmd,callback){
+     var User = this.aggre('User')	
+		 User.get(cmd,id,function(u,next){
+		    u.changeAge(cmd.age); 
+				callback();
+				next();
+		 })
+	  },
+
+		'transfer':function(cmd,callback){
+		   this.service(cmd.id1,cmdid2,cmd.money) 
+		}
+
+    }
+
+query handle example
+======================
+    module.exports = {
+
+    'same user':function(query,callback){
+			var User = this.aggre('User');	
+			User.findByIds(query.ids,callback)
+		},
+
+		'get a user':function(query,callback){
+			var User = this.aggre('User');	
+			User.findById(query.id,callback)
+		}
+
+    }
+
+
+event handle example
+=====================
+
+    module.exports = {
+
+    'User.change name':[
+     function(event){},
+     function(event){}
+    ],
+
+		'User.change age':[
+     function(event){},
+     function(event){}
+    ]
+    }
+
+service example
+=====================
+
+    module.exports = {
+     'transfer':function(id1,id2,money){
+		 		var User = this.aggre('User');	 
+				var user_1 = null;
+				var user_2 = null;
+				User.get(id1,function(u,next){
+					user_1 = u;
+					next();
+					User.get(id2,function(u2,next2){
+					user_2 = u2;
+					next2();
+					})	
+
+         	user_1.Outlay(money); 
+					user_2.Income(money);
+
+				})
+		 }	
+		}
+
+
+
+
 
 
