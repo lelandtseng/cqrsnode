@@ -1,6 +1,7 @@
-var db = require('cqrsnode.dbstore').Mongoose;
+var db = require('../../cqrsnode.dbstore').Tiny;
 var esdriver = require('cqrsnode.eventstore').Tiny;
 var dbconfig = require('./dbconfig');
+var dbconfig2 = require('./dbconfig2');
 
 module.exports = {
 
@@ -14,5 +15,5 @@ module.exports = {
 	commandHandlesPath:'commandHandles',
 	eventHandlesPath:'eventHandles',
 
-	dbconfig:dbconfig
+	dbconfig:dbconfig2
 }
