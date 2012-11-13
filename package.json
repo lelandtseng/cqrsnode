@@ -1,6 +1,6 @@
 {
   "name": "cqrsnode",
-  "version": "0.0.7alpha",
+  "version": "0.0.8alpha",
   "description": "cqrs framework for node.js",
   "main": "index.js",
   "scripts": {
@@ -36,5 +36,6 @@
   "bin": {
     "cqrsnode": "bin/cqrsnode.js"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "readmeFilename": "README.md"
 }
