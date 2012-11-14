@@ -1,6 +1,6 @@
 {
   "name": "cqrsnode",
-  "version": "0.0.8alpha",
+  "version": "0.0.9alpha",
   "description": "cqrs framework for node.js",
   "main": "index.js",
   "scripts": {
