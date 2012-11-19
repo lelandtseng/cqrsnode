@@ -1,6 +1,6 @@
 Note 
 ========
-publish version 0.0.7alpha , Please note this version is still too unstable.Need to wait for 0.2.0 stable version.
+publish version 0.1.0alpha , Please note this version is still too unstable.Need to wait for 0.2.0 stable version.
 
 cqrsnode
 =========
