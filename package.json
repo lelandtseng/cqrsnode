@@ -1,6 +1,6 @@
 {
   "name": "cqrsnode",
-  "version": "0.0.9alpha",
+  "version": "0.1.0alpha",
   "description": "cqrs framework for node.js",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,6 @@
     "node": ">= v0.6.16"
   },
   "dependencies": {
-    "node-extend": ">= 0.0.7",
     "node-uuid": ">=0.0.1",
     "lockmethod": ">=0.0.1",
     "cqrsnode.store": ">=0.1.0"
